@@ -1,0 +1,96 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS variables */
+:root {
+    --Green: hsl(75, 94%, 57%);
+    --White: hsl(0, 0%, 100%);
+    --Grey-700: hsl(0, 0%, 20%);
+    --Grey-800: hsl(0, 0%, 12%);
+    --Grey-900: hsl(0, 0%, 8%);
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: var(--Grey-900);
+    font-family: inter, sans-serif;
+    font-size: 14px;
+}
+
+/* Profile links container */
+#profileContainer {
+    width: 384px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Grey-800);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+/* Profile Picture */
+img {
+    width: 6rem;
+    border-radius: 50%;
+    margin: 2rem 0;
+}
+
+/* Profile full name */
+#fullName {
+    color: var(--White);
+    font-weight: 600;
+}
+
+/* Profile Location */
+.location {
+    color: var(--Green);
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+/* Profile Description */
+.description {
+    color: var(--White);
+    font-weight: 400;
+    margin-top: 2rem;
+}
+
+/* Profile Links */
+.links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--White);
+    list-style-type: none;
+    margin: 1rem;
+}
+
+.links li {
+    width: 90%;
+    background-color: var(--Grey-700);
+    margin: .5rem 1rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+li:hover {
+    background: var(--Green);
+    color: var(--Grey-900);
+}
+/* Mobile Design */
+@media screen and (max-width: 500px) {
+    #profileContainer {
+        width: 100%;
+    }
+}
